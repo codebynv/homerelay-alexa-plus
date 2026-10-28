@@ -1,0 +1,28 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "HomeRelay",
+          "summary": "Check pantry items via Alexa",
+          "description": "A skill to check pantry availability using HomeRelay MCP tools."
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Ask to check pantry with a list of ingredients.",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {}
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    }
+  }
+}

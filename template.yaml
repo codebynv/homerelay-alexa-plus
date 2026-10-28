@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: HomeRelay Alexa skill and MCP server deployment
+
+Globals:
+  Function:
+    Runtime: nodejs22.x
+    Timeout: 10
+    MemorySize: 128
+    Architectures:
+      - x86_64
+    Environment:
+      Variables:
+        NODE_OPTIONS: "--enable-source-maps"
+
+Resources:
+  AlexaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: apps/alexa/alexa.zip
+      Handler: index.handler
+      Runtime: nodejs22.x
+      Description: Handles Alexa skill requests and talks to MCP.
+      Environment:
+        Variables:
+          MCP_URL: !Sub "https://${McpApi}.execute-api.${AWS::Region}.amazonaws.com/prod/mcp"
+      LoggingConfig:
+        LogFormat: JSON
+        LogGroup:
+          RetentionInDays: 7
+      Policies:
+        - CloudWatchLogsPolicy
+
+  McpFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: apps/server/server.zip
+      Handler: mcp-lambda.handler
+      Runtime: nodejs22.x
+      Description: Public MCP JSON‑RPC endpoint.
+      LoggingConfig:
+        LogFormat: JSON
+        LogGroup:
+          RetentionInDays: 7
+      Policies:
+        - CloudWatchLogsPolicy
+
+  McpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: prod
+      CorsConfiguration:
+        AllowOrigins: ['*']
+        AllowMethods: ['POST']
+        AllowHeaders: ['Content-Type', 'Accept']
+      DefinitionBody:
+        openapi: 3.0.1
+        info:
+          title: HomeRelay MCP API
+          version: '1.0'
+        paths:
+          /mcp:
+            post:
+              x-amazon-apigateway-integration:
+                payloadFormatVersion: '2.0'
+                type: AWS_PROXY
+                httpMethod: POST
+                uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${McpFunction.Arn}/invocations
+
+  McpApiPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref McpFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${McpApi}/*"
+
+Outputs:
+  AlexaFunctionArn:
+    Description: ARN of the Alexa Lambda function
+    Value: !GetAtt AlexaFunction.Arn
+  McpEndpoint:
+    Description: Public HTTPS endpoint for the MCP Lambda
+    Value: !Sub "https://${McpApi}.execute-api.${AWS::Region}.amazonaws.com/prod/mcp"

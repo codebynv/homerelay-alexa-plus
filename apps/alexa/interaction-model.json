@@ -1,0 +1,40 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "home relay",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CheckPantryIntent",
+          "slots": [
+            {
+              "name": "ingredients",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "check pantry for {ingredients}",
+            "what do I have for {ingredients}",
+            "do I have {ingredients}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "shoppingLists": [
+    {
+      "list": [
+        {
+          "item": "beef",
+          "cost": 5
+        }
+      ],
+      "totalCost": 5
+    },
+    {
+      "list": [
+        {
+          "item": "beef",
+          "cost": 5
+        }
+      ],
+      "totalCost": 5
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    },
+    {
+      "list": [
+        {
+          "item": "tomato",
+          "cost": 2.99
+        },
+        {
+          "item": "onion",
+          "cost": 1.99
+        }
+      ],
+      "totalCost": 4.98
+    }
+  ],
+  "errands": [
+    {
+      "assignment": {
+        "member": "Sam",
+        "items": [
+          "beef"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Jordan",
+        "items": [
+          "beef"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Alice",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Alice",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Alice",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Alice",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    },
+    {
+      "assignment": {
+        "member": "Bob",
+        "items": [
+          "milk",
+          "eggs"
+        ]
+      }
+    }
+  ],
+  "reminders": [
+    {
+      "reminderId": "rem-1792776505205-2t6fql7"
+    },
+    {
+      "reminderId": "rem-1792776533203-3kebuw6"
+    },
+    {
+      "reminderId": "rem-1792776966182-ucy2kku"
+    },
+    {
+      "reminderId": "rem-1792777040751-d1570fa"
+    },
+    {
+      "reminderId": "rem-1792777062769-ko2wuyg"
+    },
+    {
+      "reminderId": "rem-1792777347323-9ltf1aw"
+    },
+    {
+      "reminderId": "rem-1792779124221-itbni1p"
+    },
+    {
+      "reminderId": "rem-1793172241541-1ps38y6"
+    },
+    {
+      "reminderId": "rem-1793172285852-ade4kvr"
+    },
+    {
+      "reminderId": "rem-1793172371791-9mh9uyq"
+    },
+    {
+      "reminderId": "rem-1793176246114-tr8v8sw"
+    },
+    {
+      "reminderId": "rem-1793189282254-gpo4ybx"
+    },
+    {
+      "reminderId": "rem-1793190622747-amgowpk"
+    },
+    {
+      "reminderId": "rem-1793191855462-xp8kuy0"
+    },
+    {
+      "reminderId": "rem-1793193225881-zuhv783"
+    },
+    {
+      "reminderId": "rem-1793194542902-awt6dts"
+    },
+    {
+      "reminderId": "rem-1793195634919-yu0821v"
+    },
+    {
+      "reminderId": "rem-1793195711125-zivl2jm"
+    },
+    {
+      "reminderId": "rem-1793195884830-978a37u"
+    },
+    {
+      "reminderId": "rem-1793200504597-xnd4jdg"
+    }
+  ]
+}

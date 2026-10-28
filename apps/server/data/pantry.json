@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "name": "chicken breast", "quantity": 2, "unit": "lbs" },
+    { "name": "rice", "quantity": 3, "unit": "cups" },
+    { "name": "broccoli", "quantity": 2, "unit": "heads" },
+    { "name": "olive oil", "quantity": 1, "unit": "bottle" },
+    { "name": "garlic", "quantity": 5, "unit": "cloves" },
+    { "name": "onion", "quantity": 3, "unit": "pieces" },
+    { "name": "tomato", "quantity": 4, "unit": "pieces" },
+    { "name": "pasta", "quantity": 2, "unit": "boxes" },
+    { "name": "cheese", "quantity": 1, "unit": "block" },
+    { "name": "eggs", "quantity": 12, "unit": "pieces" }
+  ]
+}

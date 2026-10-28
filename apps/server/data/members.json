@@ -1,0 +1,7 @@
+{
+  "members": [
+    { "id": "1", "name": "Alex", "role": "adult" },
+    { "id": "2", "name": "Jordan", "role": "adult" },
+    { "id": "3", "name": "Sam", "role": "teen" }
+  ]
+}

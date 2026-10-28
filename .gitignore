@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables & secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.pfx
+
+# Build outputs and deployment artifacts
+dist/
+build/
+*.zip
+.aws-sam/
+
+# Test coverage & logs
+coverage/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary & local development directories
+tmp/
+scratch/
+.cfnlint_env/
+.system_generated/
+.user_uploaded/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.metadata.json
