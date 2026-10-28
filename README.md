@@ -6,10 +6,14 @@
 
 ---
 
-## 🌐 Live Demonstrations
+## 🌐 Live Demonstrations & Demo Video
 
 > **Note on Tunnel Availability:** The Cloudflare Quick Tunnel links below are host-backed demonstration URLs maintained while the local background daemons are running.
 
+* **Official Hackathon Demo Video:**  
+  [`demo-video/homerelay-demo.mp4`](demo-video/homerelay-demo.mp4) (88.7s, 1080p Full HD, H.264 / AAC with neural voiceover narration)  
+  * Narration Script: [`demo-video/narration-script.md`](demo-video/narration-script.md)  
+  * Storyboard & Shot List: [`demo-video/shot-list.md`](demo-video/shot-list.md)
 * **Primary Web Dashboard (Host-Backed Tunnel):**  
   [`https://jacksonville-enlargement-historic-variations.trycloudflare.com`](https://jacksonville-enlargement-historic-variations.trycloudflare.com)
 * **Edge Web Dashboard (Vercel Deployment):**  

@@ -78,5 +78,4 @@ Household management is one of the most persistent friction points in daily life
 | **Live Backend API** | `https://packet-header-eggs-investor.trycloudflare.com` | Verified Live (HTTP 200) |
 | **Health Endpoint** | `https://packet-header-eggs-investor.trycloudflare.com/health` | Verified Live (HTTP 200) |
 | **Alexa Skill Model** | `apps/alexa/interaction-model.json` & `apps/alexa/skill.json` | Validated & Ready |
-| **SAM Template** | `template.yaml` | Validated with `sam validate --lint` |
-| **Demo Video** | [Record 2-3 minute screen recording demonstrating the 4 steps above] | Manual Action |
+| **Demo Video** | `demo-video/homerelay-demo.mp4` (88.7s, 1080p, H.264/AAC with full narration script & shot list) | Created & Verified |

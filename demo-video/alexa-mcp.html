@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HomeRelay Alexa & MCP Architecture</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1920px;
+      height: 1080px;
+      background: radial-gradient(circle at 50% 30%, #15221b 0%, #0b1410 70%, #050806 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 80px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .title-group h2 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .badge {
+      background: rgba(46, 125, 50, 0.3);
+      border: 1px solid rgba(76, 175, 80, 0.4);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #a5d6a7;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      flex: 1;
+    }
+    .panel {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .panel-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #a5d6a7;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .code-box {
+      background: #080d0a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      font-family: "Consolas", monospace;
+      font-size: 15px;
+      color: #e0e0e0;
+      line-height: 1.6;
+      flex: 1;
+      overflow: hidden;
+    }
+    .highlight { color: #81c784; font-weight: bold; }
+    .keyword { color: #64b5f6; }
+    .string { color: #ffb74d; }
+    .audit-item {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 4px solid #4caf50;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+    .audit-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .audit-tool { font-weight: 700; color: #81c784; }
+    .audit-status { background: #2e7d32; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+    .audit-body { font-size: 13px; color: #b0bec5; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title-group">
+      <h2>🗣️ Voice Coordination & Model Context Protocol (MCP)</h2>
+    </div>
+    <div class="badge">Official MCP Streamable HTTP 2025-11-25</div>
+  </div>
+
+  <div class="content-grid">
+    <div class="panel">
+      <div class="panel-title">🎙️ Alexa Skill Handler (apps/alexa)</div>
+      <div class="code-box">
+        <span class="keyword">export const</span> CheckPantryIntentHandler = {<br>
+        &nbsp;&nbsp;<span class="keyword">async</span> handle(handlerInput) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span> ingredients = getSlots(handlerInput);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Connect to MCP Server via Streamable HTTP</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">await</span> client.connect(transport);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span> res = <span class="keyword">await</span> client.<span class="highlight">callTool</span>({<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: <span class="string">'check_pantry'</span>,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arguments: { ingredients }<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span> speech = `Available: ${res.available}. Missing: ${res.missing}.`;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> responseBuilder.<span class="highlight">speak</span>(speech).getResponse();<br>
+        &nbsp;&nbsp;}<br>
+        };
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">📋 Immutable Audit Trail (Action Log)</div>
+      <div class="audit-item">
+        <div class="audit-header">
+          <span class="audit-tool">check_pantry</span>
+          <span class="audit-status">SUCCESS</span>
+        </div>
+        <div class="audit-body">
+          Input: {"ingredients":["chicken breast","broccoli","garlic","onion","rice"]}<br>
+          Result: {"available":["chicken breast","broccoli","garlic","onion","rice"],"missing":[]}
+        </div>
+      </div>
+
+      <div class="audit-item">
+        <div class="audit-header">
+          <span class="audit-tool">create_reminder</span>
+          <span class="audit-status">SUCCESS</span>
+        </div>
+        <div class="audit-body">
+          Input: {"title":"Dinner: chicken stir fry for 4 guests"}<br>
+          Result: {"reminderId":"rem-179320","status":"scheduled"}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

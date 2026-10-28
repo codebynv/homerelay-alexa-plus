@@ -1,7 +1,9 @@
 // API client for HomeRelay Express server & MCP endpoints
-// In production, set VITE_API_BASE to the deployed backend URL (e.g., https://api.example.com)
-// In development, defaults to local Express server
-const API_BASE = import.meta.env.VITE_API_BASE || "http://127.0.0.1:4000";
+// Automatically connects to local backend when accessed locally, or remote tunnel when deployed
+const isLocal = typeof window !== "undefined" && (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost");
+const API_BASE = isLocal
+  ? "http://127.0.0.1:4000"
+  : (import.meta.env.VITE_API_BASE || "https://packet-header-eggs-investor.trycloudflare.com");
 
 export interface PantryItem {
   name: string;

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HomeRelay Outro</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1920px;
+      height: 1080px;
+      background: radial-gradient(circle at 50% 40%, #172a20 0%, #0c1510 60%, #050806 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(46, 125, 50, 0.25);
+      border: 1px solid rgba(76, 175, 80, 0.4);
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #81c784;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 80px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 40%, #a5d6a7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      font-size: 26px;
+      color: #b0c9b6;
+      max-width: 950px;
+      text-align: center;
+      line-height: 1.4;
+      margin-bottom: 45px;
+    }
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 1000px;
+    }
+    .link-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(20px);
+      padding: 18px 28px;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .link-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .link-icon {
+      font-size: 24px;
+    }
+    .link-label {
+      font-size: 14px;
+      color: #8ba192;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .link-val {
+      font-size: 18px;
+      color: #ffffff;
+      font-family: monospace;
+      font-weight: 600;
+    }
+    .status-pill {
+      background: rgba(46, 125, 50, 0.3);
+      color: #a5d6a7;
+      border: 1px solid rgba(76, 175, 80, 0.5);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .thanks {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #819688;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="badge-top">Amazon Developer Hackathon Submission</div>
+  <h1>HomeRelay</h1>
+  <p class="subtitle">One place to plan, coordinate, and stay on top of home life.<br>Safe, transparent, and auditable ambient intelligence.</p>
+  
+  <div class="links-container">
+    <div class="link-card">
+      <div class="link-info">
+        <span class="link-icon">📦</span>
+        <div>
+          <div class="link-label">GitHub Repository</div>
+          <div class="link-val">github.com/codebynv/homerelay-alexa-plus</div>
+        </div>
+      </div>
+      <span class="status-pill">Public • Verified</span>
+    </div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <span class="link-icon">🌐</span>
+        <div>
+          <div class="link-label">Live Web Dashboard</div>
+          <div class="link-val">jacksonville-enlargement-historic-variations.trycloudflare.com</div>
+        </div>
+      </div>
+      <span class="status-pill">HTTP 200 OK</span>
+    </div>
+
+    <div class="link-card">
+      <div class="link-info">
+        <span class="link-icon">⚡</span>
+        <div>
+          <div class="link-label">MCP / REST API Backend</div>
+          <div class="link-val">packet-header-eggs-investor.trycloudflare.com</div>
+        </div>
+      </div>
+      <span class="status-pill">HTTP 200 OK</span>
+    </div>
+  </div>
+
+  <div class="thanks">
+    Built with React • Node.js • AWS SAM & Lambda • Model Context Protocol (MCP)
+  </div>
+</body>
+</html>
