@@ -1,7 +1,8 @@
 # HomeRelay — Alexa+ Household Coordination Agent
 
 > **Amazon Developer Hackathon — Alexa+ Track Submission**  
-> An intelligent, auditable household coordination agent that bridges Alexa conversational interfaces with deterministic planning and the Model Context Protocol (MCP).
+> An intelligent, auditable household coordination agent that bridges Alexa conversational interfaces with deterministic planning and the Model Context Protocol (MCP).  
+> **GitHub Repository:** [https://github.com/codebynv/homerelay-alexa-plus](https://github.com/codebynv/homerelay-alexa-plus)
 
 ---
 
@@ -92,7 +93,7 @@ Household coordination today is deeply fragmented. Families juggle pantry invent
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/homerelay-alexa-plus.git
+git clone https://github.com/codebynv/homerelay-alexa-plus.git
 cd homerelay-alexa-plus
 
 # Install all monorepo workspace dependencies

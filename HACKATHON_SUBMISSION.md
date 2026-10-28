@@ -72,7 +72,7 @@ Household management is one of the most persistent friction points in daily life
 | :--- | :--- | :--- |
 | **Project Title** | HomeRelay | Ready |
 | **Track** | Alexa+ | Ready |
-| **GitHub Repository** | Initialized locally on `main` branch (`homerelay-alexa-plus`) | Ready to push |
+| **GitHub Repository** | https://github.com/codebynv/homerelay-alexa-plus | Verified Public |
 | **Working Live Demo (Web)** | `https://jacksonville-enlargement-historic-variations.trycloudflare.com` | Verified Live (HTTP 200) |
 | **Edge Deployment (Web)** | `https://racing-squall-u0iio9k.tmp.now` | Verified Live (HTTP 200) |
 | **Live Backend API** | `https://packet-header-eggs-investor.trycloudflare.com` | Verified Live (HTTP 200) |
